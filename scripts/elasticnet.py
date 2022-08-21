@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
         # Save grid search results
 
-        # pd.DataFrame(gs.cv_results_).to_csv("grid_search_elastic_" + dataset)
+        pd.DataFrame(gs.cv_results_).to_csv("plots/grid_search_elastic_" + dataset)
 
         test["datetime"] = pd.to_datetime(test["Date"].astype(str) + test["Hour"].astype(str), format='%Y-%m-%d%H')
 

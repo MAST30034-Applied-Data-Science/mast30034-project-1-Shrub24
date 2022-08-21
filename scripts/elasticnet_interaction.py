@@ -70,7 +70,7 @@ if __name__ == "__main__":
         print(f"Used {sum((coef != 0 for coef in coefs))}/{len(coefs)} features")
 
         # Save grid search results
-        # pd.DataFrame(gs.cv_results_).to_csv("grid_search_interaction_elastic_" + dataset)
+        pd.DataFrame(gs.cv_results_).to_csv("plots/grid_search_interaction_elastic_" + dataset)
 
         # Generate a plot of predicted vs test labels by airport
         test["datetime"] = pd.to_datetime(test["Date"].astype(str) + test["Hour"].astype(str), format='%Y-%m-%d%H')
